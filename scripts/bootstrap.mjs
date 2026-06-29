@@ -198,7 +198,8 @@ try {
       "description": "The client to facilitate login to the dashboard in the context of an organization.",
       "callbacks": [`${APP_BASE_URL}/auth/callback`],
       "allowed_logout_urls": [APP_BASE_URL],
-      "initiate_login_uri": "https://example.com/auth/login",
+      // Requires HTTPS. For local dev, set APP_BASE_URL to a tunnel URL first (see README-ADVANCED.md).
+      "initiate_login_uri": `${APP_BASE_URL}/auth/login`,
       "app_type": "regular_web",
       "oidc_conformant": true,
       "grant_types": ["authorization_code","refresh_token"],

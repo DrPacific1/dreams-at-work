@@ -7,7 +7,7 @@ import { appClient, managementClient } from "@/lib/auth0"
 import { Button } from "@/components/ui/button"
 import { Auth0Logo } from "@/components/auth0-logo"
 import { ModeToggle } from "@/components/mode-toggle"
-import { OrganizationSwitcher } from "@/components/organization-switcher"
+import { OrganizationSwitcherWrapper as OrganizationSwitcher } from "@/components/organization-switcher-wrapper"
 import { UserNav } from "@/components/user-nav"
 
 export default async function DashboardLayout({

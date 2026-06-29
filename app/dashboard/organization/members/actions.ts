@@ -41,7 +41,7 @@ export const createInvitation = withServerActionAuth(
             email,
           },
           inviter: {
-            name: session.user.name!,
+            name: session.user.name ?? session.user.email ?? "A team member",
           },
           client_id: process.env.AUTH0_CLIENT_ID,
           // if the roleId exists, then assign it. Regular members do not have a role assigned,

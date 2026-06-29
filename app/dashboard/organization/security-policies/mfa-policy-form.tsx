@@ -1,6 +1,6 @@
 "use client"
 
-import { KeyIcon, KeySquareIcon } from "lucide-react"
+import { FingerprintIcon, KeyIcon, KeySquareIcon, SmartphoneIcon } from "lucide-react"
 import { toast } from "sonner"
 
 import { MfaPolicy } from "@/lib/mfa-policy"
@@ -137,6 +137,57 @@ export function MfaPolicyForm({ organization }: Props) {
                   id="webauthn-roaming"
                   className="peer"
                   name="webauthn-roaming"
+                />
+              </div>
+
+              <div className="flex justify-between space-x-1 rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent/5 hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary">
+                <Label className="flex items-center space-x-4" htmlFor="sms">
+                  <div className="rounded-md border bg-secondary p-3">
+                    <SmartphoneIcon className="size-5" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <div>SMS</div>
+                    <div className="text-muted-foreground">
+                      Users receive a one-time code via text message.
+                    </div>
+                  </div>
+                </Label>
+
+                <Checkbox
+                  defaultChecked={organization.mfaPolicy.providers.includes(
+                    "sms"
+                  )}
+                  value="sms"
+                  id="sms"
+                  className="peer"
+                  name="sms"
+                />
+              </div>
+
+              <div className="flex justify-between space-x-1 rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent/5 hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary">
+                <Label
+                  className="flex items-center space-x-4"
+                  htmlFor="webauthn-platform"
+                >
+                  <div className="rounded-md border bg-secondary p-3">
+                    <FingerprintIcon className="size-5" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <div>Passkeys</div>
+                    <div className="text-muted-foreground">
+                      Device biometrics — Face ID, Touch ID, or Windows Hello.
+                    </div>
+                  </div>
+                </Label>
+
+                <Checkbox
+                  defaultChecked={organization.mfaPolicy.providers.includes(
+                    "webauthn-platform"
+                  )}
+                  value="webauthn-platform"
+                  id="webauthn-platform"
+                  className="peer"
+                  name="webauthn-platform"
                 />
               </div>
             </div>

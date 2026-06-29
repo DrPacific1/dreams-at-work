@@ -4,6 +4,7 @@ import { SUPPORTED_PROVIDERS } from "@/lib/mfa-policy"
 import { PageHeader } from "@/components/page-header"
 
 import { MFAEnrollmentForm } from "./mfa-enrollment-form"
+import { SessionsList } from "./sessions-list"
 
 export default appClient.withPageAuthRequired(
   async function Profile() {
@@ -38,6 +39,10 @@ export default appClient.withPageAuthRequired(
         }
       })
 
+    const { data: sessionsData } = await managementClient.users.getSessions({
+      user_id: userId!,
+    })
+
     return (
       <div className="space-y-2">
         <PageHeader
@@ -46,6 +51,7 @@ export default appClient.withPageAuthRequired(
         />
 
         <MFAEnrollmentForm factors={filteredFactors} />
+        <SessionsList sessions={(sessionsData as any)?.sessions ?? []} />
       </div>
     )
   } as AppRouterPageRoute,

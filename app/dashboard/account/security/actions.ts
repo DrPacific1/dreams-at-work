@@ -48,6 +48,29 @@ export async function createEnrollment(formData: FormData) {
   }
 }
 
+export async function revokeSession(formData: FormData) {
+  const session = await appClient.getSession()
+
+  if (!session) {
+    return redirect("/auth/login")
+  }
+
+  const sessionId = formData.get("session_id")
+
+  if (!sessionId || typeof sessionId !== "string") {
+    return { error: "Session ID is required." }
+  }
+
+  try {
+    await managementClient.sessions.delete({ id: sessionId })
+    revalidatePath("/dashboard/account/security", "layout")
+    return {}
+  } catch (error) {
+    console.error("failed to revoke session", error)
+    return { error: "Failed to revoke session." }
+  }
+}
+
 export async function deleteEnrollment(formData: FormData) {
   const session = await appClient.getSession()
 

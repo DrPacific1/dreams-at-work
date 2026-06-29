@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+dreams-at-work-login/node_modules/
+dreams-at-work-login/dist/
 /.pnp
 .pnp.js
 .yarn/install-state.gz

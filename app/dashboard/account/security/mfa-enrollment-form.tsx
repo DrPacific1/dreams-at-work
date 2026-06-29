@@ -63,9 +63,9 @@ const factorsMeta: {
       "Depending on your browser, you can use WebAuthn-compliant security keys (like FIDO2) as a second factor of authentication.",
   },
   "webauthn-platform": {
-    title: "WebAuthn with FIDO Device Biometrics",
+    title: "Passkeys",
     description:
-      "Depending on your browser, you can use WebAuthn-compliant device biometrics as a second factor of authentication",
+      "Use your device's built-in biometrics (Face ID, Touch ID, or Windows Hello) as a second factor. Fast, phishing-resistant, and no extra hardware needed.",
   },
   "recovery-code": {
     title: "Recovery Code",

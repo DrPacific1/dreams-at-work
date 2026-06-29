@@ -1,0 +1,17 @@
+{
+  "client": { "id": "demo-client", "name": "Dreams@Work" },
+  "organization": { "display_name": "Acme Corp", "id": "org_demo", "name": "acme-corp", "usage": "allow" },
+  "prompt": { "name": "signup-id" },
+  "screen": {
+    "name": "signup-id",
+    "links": { "login": "#" }
+  },
+  "tenant": {
+    "enabled_factors": ["otp"],
+    "enabled_locales": ["en"],
+    "friendly_name": "Dreams@Work",
+    "name": "dreamsatwork"
+  },
+  "transaction": { "locale": "en", "state": "demo-state" },
+  "untrusted_data": { "authorization_params": { "ui_locales": "en" } }
+}

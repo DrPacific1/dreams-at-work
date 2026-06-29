@@ -1,0 +1,20 @@
+{
+  "client": { "id": "demo-client", "name": "SaaStart" },
+  "organization": { "display_name": "Dreams@Work", "id": "org_demo", "name": "dreams-at-work", "usage": "allow" },
+  "prompt": { "name": "login-password" },
+  "screen": {
+    "name": "login-password",
+    "links": { "reset_password": "#", "signup": "#" },
+    "texts": {
+      "description": "Enter your password for Dreams@Work to continue to SaaStart"
+    }
+  },
+  "tenant": {
+    "enabled_factors": ["otp"],
+    "enabled_locales": ["en"],
+    "friendly_name": "Dreams@Work",
+    "name": "dreamsatwork"
+  },
+  "transaction": { "locale": "en", "state": "demo-state" },
+  "untrusted_data": { "authorization_params": { "ui_locales": "en" } }
+}

@@ -1,0 +1,55 @@
+{
+  "tenant": "jade-scorpion-65201",
+  "prompt": "login-id",
+  "screen": "login-id",
+  "rendering_mode": "advanced",
+  "head_tags": [
+    {
+      "attributes": {
+        "defer": true,
+        "src": "http://localhost:55444/assets/shared/common.GEkSUytJ.js",
+        "type": "module"
+      },
+      "tag": "script"
+    },
+    {
+      "attributes": {
+        "defer": true,
+        "src": "http://localhost:55444/assets/shared/react-vendor.D_b7D5c1.js",
+        "type": "module"
+      },
+      "tag": "script"
+    },
+    {
+      "attributes": {
+        "href": "http://localhost:55444/assets/shared/style.DkHpTUDk.css",
+        "rel": "stylesheet"
+      },
+      "tag": "link"
+    },
+    {
+      "attributes": {
+        "defer": true,
+        "src": "http://localhost:55444/assets/shared/vendor.BqXouwtX.js",
+        "type": "module"
+      },
+      "tag": "script"
+    },
+    {
+      "attributes": {
+        "defer": true,
+        "src": "http://localhost:55444/assets/login-id/index._6eSPZOH.js",
+        "type": "module"
+      },
+      "tag": "script"
+    },
+    {
+      "attributes": {
+        "defer": true,
+        "src": "http://localhost:55444/assets/main.BHr7Ye31.js",
+        "type": "module"
+      },
+      "tag": "script"
+    }
+  ]
+}
